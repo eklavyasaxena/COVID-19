@@ -1,6 +1,6 @@
 # COVID-19
 > ETL from JHU CSSE GitHub Repo to Create Tableau Visualization.
-### Link to Viz. [Coronavirus COVID-19 Cases Worldwide](https://public.tableau.com/profile/eklavya.saxena#!/vizhome/CoronavirusCOVID-19CasesWorldwide/COVID-19_Country)    
+### Link to Visualization: [Coronavirus COVID-19 Cases Worldwide](https://public.tableau.com/profile/eklavya.saxena#!/vizhome/CoronavirusCOVID-19CasesWorldwide/COVID-19_Country)    
 
 
 #### Steps performed in ETL:
