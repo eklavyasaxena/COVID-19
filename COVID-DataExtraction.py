@@ -46,12 +46,6 @@ df_COVID.rename(columns = {'confirmed_global':'Confirmed', 'deaths_global':'Deat
                               'recovered_global':'Recovered'}, inplace = True)
 
 
-# In[5]:
-
-
-df_COVID.to_csv('COVID-19.csv', index=False)
-
-
 # In[6]:
 
 
@@ -60,15 +54,23 @@ df_COVID['Province_State'] = np.where(df_COVID['Province_State'] == 'nan',
                                       df_COVID['Country_Region'], 
                                       df_COVID['Province_State'])
 
-
-# In[7]:
-
-
 # to fill the NaN in last three columns
 df_COVID.iloc[0:,-3:] = df_COVID.iloc[0:,-3:].fillna(0)
 
 
+# In[7]:
+
+
+print(df_COVID.head())
+
+
 # In[8]:
+
+
+df_COVID.to_csv('COVID-19.csv', index=False)
+
+
+# In[9]:
 
 
 # import sys
@@ -92,7 +94,7 @@ wks.set_dataframe(df_COVID,(1,1))
 print("-----------------Data Updated------------------")
 
 
-# In[9]:
+# In[10]:
 
 
 print("Last Updated Data As On: ", df_COVID.Date.max())
