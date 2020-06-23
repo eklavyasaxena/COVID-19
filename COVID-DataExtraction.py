@@ -72,30 +72,18 @@ df_COVID.to_csv('COVID-19.csv', index=False)
 
 # In[9]:
 
-
-# import sys
-# !{sys.executable} -m pip install pygsheets
 import pygsheets
-
 #authorization using credentials
 gdrive = pygsheets.authorize(service_file='/Users/eklav/Documents/My Tableau Repository/Datasources/COVID-DataSource/covid-viz-data-update-secret.json')
 print("-----------------Authorized--------------------")
 
-#open the google spreadsheet (where 'COVID-19' is the name of my sheet)
+# WORLD DATA
 sheet = gdrive.open('COVID-19')
 print("-----------------Sheet Opened------------------")
 
-#select the first sheet 
 wks = sheet[0]
 print("-----------------First Sheet Accessed----------")
 
-#update the first sheet with df_COVID, starting at cell A1 
 wks.set_dataframe(df_COVID,(1,1))
 print("-----------------Data Updated------------------")
-
-
-# In[10]:
-
-
-print("Last Updated Data As On: ", df_COVID.Date.max())
-
+print("Last Updated World Data As On: ", df_COVID.Date.max())
